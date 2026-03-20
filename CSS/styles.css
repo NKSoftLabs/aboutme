@@ -15,17 +15,23 @@ body {
 /* Style for H2s */
 h2 {
     display: inline-block;
-    padding: 5px 12px;
+    padding: 5px 10px;
     border: 2px solid;
     border-radius: 25px;
     font-family: Arial, sans-serif;
-    font-size: 18px;
+    font-size: 14px;
 }
 
 /* Color Variants */
 h2.yellow {
     border-color: #bdc014;
     background-color: #fff01e;
+    color: #353535;
+}
+
+h2.blue {
+    border-color: #0085b9;
+    background-color: #00b7ff;
     color: #353535;
 }
 
@@ -226,6 +232,76 @@ footer {
 
 footer p {
     margin: 0;
+}
+
+/* Proyects boxes */
+
+.projects-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.box-project {
+    border-radius: 15px;
+    padding: 20px;
+    width: 300px;
+    height: 200px; /* altura fija para mostrar bien el fondo */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    text-align: center;
+    color: #000000;
+    background-size: cover;       /* que la imagen cubra toda la caja */
+    background-position: center;  /* centrada */
+    position: relative;
+    margin: 50px auto;
+}
+
+.box-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+.box-project:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Lenguajes */
+.languages-box ul {
+    list-style: none;
+    padding: 0;
+    margin: 15px 0 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+.languages-box img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+    cursor: pointer;
+    border-radius: 8px;
+}
+
+/* Ocultar imágenes al pasar el cursor por la caja */
+.box-project:hover .languages-box img {
+    opacity: 0;
+    transform: scale(0.8);
+}
+
+/* Títulos dentro de las cajas */
+.box-project h2 {
+    transition: opacity 0.3s ease; /* transición suave */
+}
+
+/* Al pasar el cursor por la caja, el título se desvanece */
+.box-project:hover h2 {
+    opacity: 0;
 }
 
 
