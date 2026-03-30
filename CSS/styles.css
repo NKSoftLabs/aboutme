@@ -1,58 +1,51 @@
+/* main page styles */
+
 /* Background colors */
-@keyframes gradientMove {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-}
 
 body {
-    background: linear-gradient(270deg, #ffffff, #abc9ff, #ffb0eb);
-    background-size: 600% 600%;
-    animation: gradientMove 15s ease infinite;
+  background-color: #000000;
+  background-image:
+    linear-gradient(rgba(41,121,255,0.35) 1px, transparent 3px),
+    linear-gradient(90deg, rgba(41,121,255,0.35) 1px, transparent 3px);
+  background-size: 40px 40px;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  color: #ffffff;
 }
-
 
 /* Style for H2s */
-h2 {
-    display: inline-block;
-    padding: 5px 10px;
-    border: 2px solid;
-    border-radius: 25px;
-    font-family: Arial, sans-serif;
-    font-size: 14px;
-}
 
 /* Color Variants */
-h2.yellow {
-    border-color: #bdc014;
-    background-color: #fff01e;
-    color: #353535;
+h2.subtle {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: #ffffff;
+  padding-bottom: 6px;
+  border-bottom: 2px solid #2979ff;
+  margin: 0 0 1rem 0;
 }
 
-h2.blue {
-    border-color: #0085b9;
-    background-color: #00b7ff;
-    color: #353535;
-}
-
-h2.green {
-    border-color: #0aa012;
-    background-color: #33d61d;
-    color: #000000;
-}
-
-h2.purple {
-    border-color: #8615b3;
-    background-color: #9f51e7;
-    color: #000000;
+h2.side {
+  display: inline-block;
+  font-family: Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #ffffff;
+  border-left: 3px solid #2979ff;
+  padding: 4px 0 4px 14px;
+  letter-spacing: 0.03em;
+  margin: 0 0 1rem 0;
 }
 
 /* Header Banner */
 header {
-    background-color: #353535;
+    background-color: #1a1a1a;
     padding: 10px 30px;
     color: #ffffff;
-    border-bottom: 2px solid #00c3ff;
+    border-bottom: 2px solid #2979ff;
 }
 
 .top-bar {
@@ -65,6 +58,20 @@ header {
     margin: 0;
     font-size: 22px;
     font-family: Arial, sans-serif;
+}
+
+/* Profile photo */
+.top-bar-left {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.header-photo {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
 }
 
 /* btn-download-cv */
@@ -83,16 +90,7 @@ header {
     transform: scale(1.05);
 }
 
-
-/* main page styles */
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: rgb(255, 255, 255);
-    color: rgb(0, 0, 0);
-}
-
+/* Navegation menu */
 @keyframes blink {
     0%, 100% { opacity: 1; box-shadow: 0 0 6px #00ff66, 0 0 12px #00ff66; }
     50%       { opacity: 0.25; box-shadow: none; }
@@ -111,7 +109,7 @@ nav {
     display: flex;
     align-items: center;
     gap: 8px;
-    background-color: #353535;
+    background-color: #1a1a1a;
     border-radius: 70px;
 }
 
@@ -145,7 +143,7 @@ nav {
     margin: 0 4px;
 }
 
-/* btn-images */
+/* menu btn-images */
 .btn-img {
     width: 40px;
     height: 40px;
@@ -178,7 +176,7 @@ section {
 /* boxes-style */
 
 .box {
-    background-color: #f0f8ff;
+    background-color: #1a1a1a;
     border-radius: 15px;
     padding: 20px;
     width: 400px;
@@ -221,13 +219,13 @@ section {
 
 /* Footer */
 footer {
-    background-color: #353535;
+    background-color: #1a1a1a;
     color: #ffffff;
     text-align: center;
     padding: 15px 0;
     font-family: Arial, sans-serif;
     font-size: 14px;
-    border-top: 2px solid #00c3ff;
+    border-top: 2px solid #2979ff;
 }
 
 footer p {
@@ -288,18 +286,16 @@ footer p {
     border-radius: 8px;
 }
 
-/* Ocultar imágenes al pasar el cursor por la caja */
 .box-project:hover .languages-box img {
     opacity: 0;
     transform: scale(0.8);
 }
 
-/* Títulos dentro de las cajas */
+/* Projects titles */
 .box-project h2 {
     transition: opacity 0.3s ease; /* transición suave */
 }
 
-/* Al pasar el cursor por la caja, el título se desvanece */
 .box-project:hover h2 {
     opacity: 0;
 }
